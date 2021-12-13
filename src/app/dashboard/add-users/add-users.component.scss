@@ -1,0 +1,46 @@
+input{
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    outline: none;
+}
+input.ng-invalid{
+    border-bottom: 2px solid red;
+}
+input.ng-valid{
+    border-bottom: 2px solid green;
+}
+h3{
+    font-size: 1.5rem;
+    padding: 0 10px;
+}
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 120px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }

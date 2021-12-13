@@ -1,0 +1,57 @@
+<section>
+    <div class="example-label"><h2>Edit user</h2></div>
+    <div class="example-button-row">
+        <button mat-flat-button color="primary" (click)="getAllUser()">All User</button>
+    </div>
+</section>
+  <div class="container-card">
+    <mat-card class="example-card">
+      <mat-card-title *ngIf="this.cardUser['name'] !== ''">{{this.cardUser.name}}</mat-card-title>
+      <mat-card-subtitle *ngIf="this.cardUser['id'] !== 0">ID:{{this.cardUser["id"]}}</mat-card-subtitle>
+      <mat-card-content>
+        <h3 *ngIf="flagUser == false">Data updated</h3>
+        <ul>
+            <li *ngIf="this.cardUser['email'] !== ''">E-mail: {{this.cardUser.email}}</li>
+            <li *ngIf="this.cardUser['gender'] !== ''">gender: {{this.cardUser.gender}}</li>
+            <li *ngIf="this.cardUser['status'] !== ''">status: {{this.cardUser.status}}</li>
+        </ul>
+      </mat-card-content>      
+    </mat-card>  
+
+
+<mat-card class="example-card">
+    <mat-card-content>
+        <h3 *ngIf="this.cardUser['id'] !== 0">Enter new user details:</h3>
+    </mat-card-content>
+    <form class="form_card" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm)">
+
+        <div class="field">
+            Name: <br>
+            <input type="text" formControlName="name">
+        </div>
+        <div class="field">
+            E-mail: <br>
+            <input type="email" formControlName="email">
+        </div>
+    
+        <div class="radio">
+            Gender: <br>
+            <input type="radio" name="gender" value="male" required formControlName="gender">
+            <label>male</label>
+            <input type="radio" name="gender" value="female" required formControlName="gender">
+            <label>female</label>
+        </div>
+    
+        <div class="radio">
+            Status: <br>
+            <input type="radio" name="status" value="active" required formControlName="status">
+            <label>active</label>
+            <input type="radio" name="status" value="inactive" required formControlName="status">
+            <label>inactive</label>
+        </div>
+        <br>
+        <input type="submit" class="btn" [disabled]="loginForm.invalid" value="Обновить">
+    
+    </form>    
+</mat-card>
+</div>

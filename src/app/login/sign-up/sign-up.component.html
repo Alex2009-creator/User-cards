@@ -1,0 +1,40 @@
+<section>
+    <div class="example-label"><h2>Sign up</h2></div>    
+</section>
+<!-- <h2>Sign up</h2> -->
+
+<div class="container-card">
+
+    <!-- <mat-card class="example-card"> -->
+
+        <form class="form_card" novalidate [formGroup]="form" (ngSubmit)="onSubmit(form)">
+            
+            <div class="field">
+                Email: <br>
+                <input type="text"  formControlName="email" placeholder="eridan@mail.com">
+
+                <div class="errors" *ngIf="form.get('email').hasError('required') && 
+                form.get('email').touched">
+                    Обязательное поле.
+                </div>
+                <div class="errors" *ngIf="form.get('email').hasError('pattern') && 
+                form.get('email').touched">
+                    Неправильный формат e-mail.
+                </div>
+            </div>
+
+            <div class="field">
+                Пароль: <br>
+                <input type="password" formControlName="password" placeholder="5555"> 
+                <br>
+                <div class="errors" *ngIf="form.get('password').hasError('required') && 
+                form.get('password').touched" >
+                    Обязательное поле.
+                </div>
+                <p class="errors">{{messageError}}</p>
+            </div>
+            <br>
+            <input type="submit" [disabled]="!form.valid" value="Отправить">
+        </form>
+    <!-- </mat-card> -->
+</div>

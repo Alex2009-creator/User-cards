@@ -1,0 +1,20 @@
+<section>
+  <div class="example-label"><h2>User</h2></div>
+</section>
+<div class="container-card">
+  <mat-card class="example-card">
+    <mat-card-title *ngIf="this.cardUser['name'] !== ''">{{this.cardUser.name}}</mat-card-title>
+    <mat-card-subtitle *ngIf="this.cardUser['id'] !== 0">ID:{{this.cardUser["id"]}}</mat-card-subtitle>
+    <mat-card-content>
+      <h3 *ngIf="flagUser == false">Data updated</h3>
+      <ul>
+          <li *ngIf="this.cardUser['email'] !== ''">E-mail: {{this.cardUser.email}}</li>
+          <li *ngIf="this.cardUser['gender'] !== ''">gender: {{this.cardUser.gender}}</li>
+          <li *ngIf="this.cardUser['status'] !== ''">status: {{this.cardUser.status}}</li>
+      </ul>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-stroked-button color="primary" (click)="getAllUser()">All User</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

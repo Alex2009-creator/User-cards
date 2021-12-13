@@ -1,0 +1,64 @@
+input{
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    outline: none;
+}
+input.ng-invalid{
+    border-bottom: 2px solid red;
+}
+input.ng-valid{
+    border-bottom: 2px solid green;
+}
+.errors{
+    color: red;
+}
+section {
+    display: table;
+}
+
+.container-card{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.example-card {
+    width: 90%;
+    margin: 5px 0;
+}
+
+.form_card{
+    font-size: 1rem;
+}
+
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 120px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
